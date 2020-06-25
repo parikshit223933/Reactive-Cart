@@ -26,9 +26,17 @@ body {
 	margin-top: 5px;
 }
 
-.cart-item-actions div
+.cart-item-actions button
 {
     display: inline-block;
+    background-color: white;
+    border:0px;
+    margin:0px 3px;
+    outline:none;
+}
+.cart-item-actions button svg
+{
+    margin-right: 0px;
 }
 
 .action-icons {
