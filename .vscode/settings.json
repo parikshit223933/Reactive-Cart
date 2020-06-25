@@ -1,2 +1,4 @@
 {
+    "editor.detectIndentation": false,
+    "editor.mouseWheelZoom": true
 }
