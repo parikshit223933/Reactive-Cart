@@ -12,6 +12,7 @@ body {
 		monospace;
 } */
 
+/* particular cart item/ /////////////////////////////////////// */
 .cart-item {
 	display: inline-flex;
 	margin: 20px 10px;
@@ -37,4 +38,11 @@ body {
 
 .action-icons:hover {
 	cursor: pointer;
+}
+/* CART ////////////////////////////////////*/
+
+.cart
+{
+    display:flex;
+    flex-direction: column;
 }

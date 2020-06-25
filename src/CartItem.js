@@ -13,7 +13,7 @@ class CartItem extends React.Component
             img: ''
         }
         /* this.increaseQuantity=this.increaseQuantity.bind(this); */
-        this.testing();
+       /*  this.testing(); */
     }
     /* testing=()=>
     {
