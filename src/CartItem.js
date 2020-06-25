@@ -2,7 +2,9 @@ import React from 'react';
 
 class CartItem extends React.Component
 {
-    constructor()
+
+
+    /* constructor()
     {
         super();
         this.state =
@@ -12,9 +14,9 @@ class CartItem extends React.Component
             qty: 1,
             img: ''
         }
-        /* this.increaseQuantity=this.increaseQuantity.bind(this); */
-       /*  this.testing(); */
-    }
+        // this.increaseQuantity=this.increaseQuantity.bind(this);
+        // this.testing();
+    } */
     /* testing=()=>
     {
         // simulating an api call
@@ -73,12 +75,13 @@ class CartItem extends React.Component
     
     render()
     {
-        console.log('hello');
-        const { price, title, qty } = this.state
+        console.log('this.props', this.props);
+        const { price, title, qty } = this.props.product;
         return (
             <div className="cart-item">
+                {this.props.jsX}
                 <div className="left-block">
-                    <img style={styles.image} />
+                    <img style={styles.image}/>
                 </div>
                 <div className="right-block">
                     <div style={{ fontSize: 25 }}>
@@ -88,7 +91,7 @@ class CartItem extends React.Component
                         Rs. {price}
                     </div>
                     <div style={{ color: 'grey' }}>
-                        Quantity: {qty} {this.state.qty == 1 ? 'Unit' : 'Units'}
+                        Quantity: {qty} {this.props.product.qty == 1 ? 'Unit' : 'Units'}
                     </div>
                     <div className="cart-item-actions">
                         <div><i className="action-icons fas fa-trash-alt" ></i></div>
