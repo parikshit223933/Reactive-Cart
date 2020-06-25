@@ -77,11 +77,12 @@ class CartItem extends React.Component
     {
         console.log('this.props', this.props);
         const { price, title, qty } = this.props.product;
+        const {onIncreaseQuantity, onDecreaseQuantity, product, onDelete}=this.props;
         return (
             <div className="cart-item">
                 {this.props.jsX}
                 <div className="left-block">
-                    <img style={styles.image}/>
+                    <img style={styles.image} alt=""/>
                 </div>
                 <div className="right-block">
                     <div style={{ fontSize: 25 }}>
@@ -91,12 +92,12 @@ class CartItem extends React.Component
                         Rs. {price}
                     </div>
                     <div style={{ color: 'grey' }}>
-                        Quantity: {qty} {this.props.product.qty == 1 ? 'Unit' : 'Units'}
+                        Quantity: {qty} {this.props.product.qty === 1 ? 'Unit' : 'Units'}
                     </div>
                     <div className="cart-item-actions">
-                        <button><i className="action-icons fas fa-trash-alt" ></i></button>
-                        <button onClick={()=>this.props.onIncreaseQuantity(this.props.product)}><i className="action-icons fas fa-plus-square" ></i></button>
-                        <button onClick={()=>this.props.onDecreaseQuantity(this.props.product)}><i className="action-icons fas fa-minus-square"></i></button>
+                        <button onClick={()=>onDelete(product)}><i className="action-icons fas fa-trash-alt" ></i></button>
+                        <button onClick={()=>onIncreaseQuantity(product)}><i className="action-icons fas fa-plus-square" ></i></button>
+                        <button onClick={()=>onDecreaseQuantity(product)}><i className="action-icons fas fa-minus-square"></i></button>
                     </div>
                 </div>
             </div>

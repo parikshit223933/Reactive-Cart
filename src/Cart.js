@@ -49,18 +49,28 @@ class Cart extends React.Component
         const { products } = this.state;
         const index_of_required_product = products.indexOf(product);
 
-        if (products[index_of_required_product].qty == 1)
+        if (products[index_of_required_product].qty === 1)
         {
             window.alert("You can't reduce the quantity below 1, If you want to delete the product, just click on the delete button!")
             return;
         }
-            
 
         products[index_of_required_product].qty -= 1;
 
         this.setState({
             products
         })
+    }
+    handleDeleteProduct=(product)=>//We can also use filter to filter the array where the id is not eqaul to the target id (we would have passed the target id in the props and cartitem, would have returned it to us when we call the onDelete function.)
+    {
+        const {products}=this.state;
+        const index_of_required_product=products.indexOf(product);
+
+        products.splice(index_of_required_product, 1);
+
+        this.setState({
+            products
+        });
     }
     render()
     {
@@ -75,6 +85,7 @@ class Cart extends React.Component
                             key={product.id}
                             onIncreaseQuantity={this.handleIncreaseQuantity}
                             onDecreaseQuantity={this.handleonDecreaseQuantity}
+                            onDelete={this.handleDeleteProduct}
                         />
                     );
                 })}
