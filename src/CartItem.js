@@ -16,8 +16,22 @@ class CartItem extends React.Component
     }
     increaseQuantity = () =>/* arrow functions bind the balue of "this" of the function to the respective class. */
     {
-        console.log(this);
-        return;
+        // this.state.qty++;
+        console.log(this.state);
+        // set state form 1
+        /* this.setState(
+            {
+                qty:this.state.qty+1
+            }
+        ) */
+
+        // set state form 2. it is used when the previous state is required.
+        this.setState((previousState)=>
+        {
+            return {
+                qty:previousState.qty+1
+            }
+        })
     }
     render()
     {
@@ -35,7 +49,7 @@ class CartItem extends React.Component
                         Rs. {price}
                     </div>
                     <div style={{ color: 'grey' }}>
-                        {qty} Unit
+                        Quantity: {qty} {this.state.qty==1?'Unit':'Units'}
                     </div>
                     <div className="cart-item-actions">
                         <div onClick={this.increaseQuantity}><i className="action-icons fas fa-trash-alt" ></i></div>
