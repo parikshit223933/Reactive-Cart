@@ -38,6 +38,9 @@ class App extends React.Component
             .collection('products')
             .onSnapshot((snapshot) =>
             {
+                /* this onsnapshot function is an event handler which is permanently attatched to the button.
+                now when ever the button is clicked, new product will be added to the database and it will be
+                shown to us synchronously in the front end. */
                 const products = snapshot.docs.map((doc) =>
                 {
                     const data = doc.data();
@@ -57,11 +60,27 @@ class App extends React.Component
         const { products } = this.state;
         const index_of_required_product = products.indexOf(product);
 
-        products[index_of_required_product].qty += 1;
+        // products[index_of_required_product].qty += 1;
 
-        this.setState({
-            products
-        });
+        // this.setState({
+        //     products
+        // });
+        
+        const docRef=this.db.collection('products').doc(products[index_of_required_product].id);
+        docRef.update({
+            qty:products[index_of_required_product].qty+1
+        })
+        .then(()=>
+        {
+            console.log('Document updated successfully')
+        })
+        .catch((error)=>
+        {
+            if(error)
+            {
+                console.log('Error', error);
+            }
+        })
     }
 
 
@@ -77,10 +96,22 @@ class App extends React.Component
             return;
         }
 
-        products[index_of_required_product].qty -= 1;
+        // products[index_of_required_product].qty -= 1;
 
-        this.setState({
-            products
+        // this.setState({
+        //     products
+        // })
+        const docRef=this.db.collection('products').doc(products[index_of_required_product].id);
+        docRef.update({
+            qty:products[index_of_required_product].qty-1
+        })
+        .then(()=>
+        {
+            console.log('Document Updated Successfully!');
+        })
+        .catch((error)=>
+        {
+            console.log('There was an error in updating the document', error);
         })
     }
 
@@ -91,11 +122,22 @@ class App extends React.Component
         const { products } = this.state;
         const index_of_required_product = products.indexOf(product);
 
-        products.splice(index_of_required_product, 1);
+        // products.splice(index_of_required_product, 1);
 
-        this.setState({
-            products
-        });
+        // this.setState({
+        //     products
+        // });
+
+        const docRef=this.db.collection('products').doc(products[index_of_required_product].id);
+        docRef.delete()
+        .then(()=>
+        {
+            console.log('Document Deleted Successfully');
+        })
+        .catch((error)=>
+        {
+            console.log('Error in deleting the document!', error);
+        })
     }
 
 

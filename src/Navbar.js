@@ -7,9 +7,9 @@ const Navbar = (props) =>
             <div style={{color:'#ff0072'}}>
                 <h1>Reactive Cart</h1>
             </div>
-            <div className="add-product-button">
+            {/* <div className="add-product-button">
                 <button onClick={props.addProduct}>Add a Product</button>
-            </div>
+            </div> */}
             <div className="cart-icon-container">
                 <button>
                     <i className="fas fa-shopping-cart" style={{ color: 'white' }}></i>
