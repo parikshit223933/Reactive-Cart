@@ -15,7 +15,9 @@ body {
 /* particular cart item/ /////////////////////////////////////// */
 .cart-item {
 	display: inline-flex;
-	margin: 20px 10px;
+    margin: 20px 10px;
+    border:1px solid rgb(209, 209, 209);
+    padding:5px;
 }
 
 .cart-item .right-block {
@@ -52,20 +54,23 @@ body {
 .cart
 {
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 /* Navbar/////////////////////////////// */
 .navbar
 {
     background-color: black;
-    height:50px;
+    height:60px;
     width:100%;
     box-sizing: border-box;
     display:flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    padding:0px 10px;
+    padding:0px 20px;
 }
 
 .cart-icon-container svg
@@ -94,4 +99,21 @@ button span
     right:0px;
     padding-top:2px;
     box-sizing: border-box;
+}
+
+/* TOTAL PRICE//////////////////////////////////////// */
+.total-price-container
+{
+    background-color:#ffbc00;
+    padding:5px 5%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.total-price-heading
+{
+    display:block;
+
 }

@@ -5,6 +5,9 @@ const Navbar = (props) =>
     console.log(props.count)
     return (
         <div className='navbar' style={{ backgroundColor: 'black' }}>
+            <div style={{color:'#ff0072'}}>
+                <h1>Reactive Cart</h1>
+            </div>
             <div className="cart-icon-container">
                 <button>
                     <i className="fas fa-shopping-cart" style={{ color: 'white' }}></i>
