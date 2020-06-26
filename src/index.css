@@ -54,3 +54,42 @@ body {
     display:flex;
     flex-direction: column;
 }
+/* Navbar/////////////////////////////// */
+.navbar
+{
+    background-color: black;
+    height:50px;
+    width:100%;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding:0px 10px;
+}
+
+.cart-icon-container svg
+{
+    font-size:30px;
+}
+.cart-icon-container button
+{
+    outline:none;
+    border:0px;
+    background-color: black;
+    cursor:pointer;
+    position:relative;
+}
+button span
+{
+    position: absolute;
+    background-color: orangered;
+    border-radius: 50%;
+    width:20px;
+    height:20px;
+    display:block;
+    top:0px;
+    right:0px;
+    padding-top:2px;
+    box-sizing: border-box;
+}
