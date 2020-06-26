@@ -2,11 +2,13 @@ import React from 'react';
 
 const Navbar = (props) =>
 {
-    console.log(props.count)
     return (
         <div className='navbar' style={{ backgroundColor: 'black' }}>
             <div style={{color:'#ff0072'}}>
                 <h1>Reactive Cart</h1>
+            </div>
+            <div className="add-product-button">
+                <button onClick={props.addProduct}>Add a Product</button>
             </div>
             <div className="cart-icon-container">
                 <button>
