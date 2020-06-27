@@ -11,7 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Screenshot
 
-![SC!](public/SC1.png)
+![SC!](https://github.com/parikshit223933/Reactive-Cart/blob/master/public/SC1.PNG)
 
 ## Features
 
