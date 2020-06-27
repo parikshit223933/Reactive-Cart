@@ -36,6 +36,9 @@ class App extends React.Component
         //     });
         this.db
             .collection('products')
+            // .where('price', '<', 20000)
+            // .where('qty', '==', 5)
+            .orderBy('price', 'desc')
             .onSnapshot((snapshot) =>
             {
                 /* this onsnapshot function is an event handler which is permanently attatched to the button.
