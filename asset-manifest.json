@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Reactive-Cart/static/css/main.0c4cfffa.chunk.css",
+    "main.js": "/Reactive-Cart/static/js/main.55ca31b4.chunk.js",
+    "main.js.map": "/Reactive-Cart/static/js/main.55ca31b4.chunk.js.map",
+    "runtime-main.js": "/Reactive-Cart/static/js/runtime-main.a524c372.js",
+    "runtime-main.js.map": "/Reactive-Cart/static/js/runtime-main.a524c372.js.map",
+    "static/js/2.cc00d891.chunk.js": "/Reactive-Cart/static/js/2.cc00d891.chunk.js",
+    "static/js/2.cc00d891.chunk.js.map": "/Reactive-Cart/static/js/2.cc00d891.chunk.js.map",
+    "index.html": "/Reactive-Cart/index.html",
+    "precache-manifest.c7a7a0730f760dd76604433de0d74a91.js": "/Reactive-Cart/precache-manifest.c7a7a0730f760dd76604433de0d74a91.js",
+    "service-worker.js": "/Reactive-Cart/service-worker.js",
+    "static/css/main.0c4cfffa.chunk.css.map": "/Reactive-Cart/static/css/main.0c4cfffa.chunk.css.map",
+    "static/js/2.cc00d891.chunk.js.LICENSE.txt": "/Reactive-Cart/static/js/2.cc00d891.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a524c372.js",
+    "static/js/2.cc00d891.chunk.js",
+    "static/css/main.0c4cfffa.chunk.css",
+    "static/js/main.55ca31b4.chunk.js"
+  ]
+}
